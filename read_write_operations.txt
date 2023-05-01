@@ -1,0 +1,30 @@
+Read / Write
+
+Write Operations
+1. client calls a function known as create(), to create a new file.
+2. DFS connects with NameNode
+   - NameNode verify that file does not exist and if client has the permission to write a file
+   - If client do not have permission to write or file already exists than IOException will be thrown.
+3. Then one object is created of type FSDataOutputStream
+4. FSDataOutputStream contains DFSOutputStream, which handles the communication b/w DataNode and NameNode.
+5. DFSOutputStream keeps on creating packets with data, while client is writing data. Then these packets are enqueued into a queue which is called a DataQueue.
+6. DataStreamer - consumes DataQueue
+7. Ack Queue is maintained by DFSOutputStream to store packets which are waiting for acknowledgement from DataNodes
+8. Once ack for a packet in the queue is received from all data nodes in the pipeline, it is removed from the ack queue.
+=========================================================
+
+Read Operations
+1. client calls the open() method on FileSystemObject
+2. DFS calls the NameNode to get the location of blocks. For each data block, NameNode returns the addresses of Datanodes that contains a copy of that block.
+3. DFS returns FSDataInputStream to the client from where client can read the data.
+4. Client calls the read() method on FSDataInputStream object
+
+
+
+
+
+
+
+
+
+
