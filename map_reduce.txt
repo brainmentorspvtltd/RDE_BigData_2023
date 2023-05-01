@@ -1,0 +1,34 @@
+Hadoop
+- HDFS (Storage)
+- MR - MapReduce (Processing)
+- YARN - Processing
+==============================
+
+Problems before MapReduce
+- Critical Path problem
+- Reliability Problem
+- Equal Split issue
+- Single Split may fail
+- Aggregation of result
+
+MapReduce
+- it is build to process huge amount of data in parallel by dividing it into independent task
+- we get input from a list and converts it into output which is also a list
+
+Map - Business logic. convert input into key-value pair
+Reduce - takes input from map. Applies aggregation on key-value pair
+
+Map task - (Split and Mapping)
+Reduce task - (Shuffling and reducing)
+
+
+Job Tracker - Master (responsible for complete execution of submitted job)
+MultipleTask Tracker - Slave (each of them performing there jobs)
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+Input
+InputFormat
+- how input files are split up and read in Hadoop is defined by   InputFormat
+InputSplit
+RecordReader
+- it is responsible for reading actual data/records from input file
+- read the data -> convert data into key:value pair
+Mapper
+Combiner
+- it is mini reducer
+Partitioner
+Shuffling and Sorting
+Reducer
+OutputFormat
+Output
+=======================================
+YARN - Yet Another Resource Negotiator
+- Resource Management Layer
+- it was introduced in Hadoop 2.x
+- it also does job scheduling
+
+Resource Manager (Master)
+- Scheduler - allocates the resources to running application
+- Application Manager
+
+Node Manager (Slave)
+- responsible for containers monitoring their resource usage
+- report to ResourceManager
+
+Application Master
+- One application master runs per application
+=============================================
+
+High Availability
+- SPOF - Single Point of Failure
+
+Automatic Failover
+- zookeeper (coordination engine)
+
+
+
+
+
+

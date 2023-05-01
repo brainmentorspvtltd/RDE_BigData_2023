@@ -1,0 +1,16 @@
+Big data
+- it provides the tool, methodologies, technologies that are used to capture, store, analyze, summarize data in seconds to find relationship and insight for research and innovation
+
+Characterstics of big data
+- 5 Vs of big data
+  - volume	- size of data
+  - variety	- structured/unstructured/semi-structured
+  - velocity	- speed of data
+  - value	- worth of data
+  - veracity	- quality of data
+=====================================
+
+3 major component :
+- HDFS (Storage)  - Hadoop Distributed File System
+- YARN (Processing) - Yet Another Resource Negotiator
+- MapReduce (Processing) - Data Processing Layer

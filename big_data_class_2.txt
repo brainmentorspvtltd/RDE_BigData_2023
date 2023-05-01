@@ -1,0 +1,44 @@
+Hadoop
+
+NameNode
+- runs on master machine
+- monitor, manage or maintain data node
+- it stores the metadata
+- it regularly recieves heartbeat from data node
+
+DataNode
+- runs on slave machine
+- it stores actual business logic/data
+- it serves read and write request from user
+- after every 3 seconds it sends heartbeat to namenode
+
+=========================================
+Hadoop Architecture
+- Data will be processed in slave machines
+- File will be split into blocks (128mb max size each)
+- Each block is replicated 3 times (replication factor)
+- Each replication for a particular block is written in a seperate slave machine
+
+=========================================
+
+HDFS - Hadoop distributed file system
+- primary storage system of hadoop
+- it runs on commodity hardware
+- this is default big data storage layer of apache hadoop
+- hadoop directly interacts with HDFS through shell commands
+- distributed data will be processed parallely
+
+========================================
+
+Task of HDFS DataNode
+- NameNode, DataNode, Secondary NameNode
+
+Secondary Namenode :
+Namenode stores metadata like file system namespace information
+Namenode stores info in 2 file :
+- fsImage - Snapshot of the file system, stores info like modification, access time, permission, replication
+- Edit logs - stores the activities/transactions being performed on HDFS
+=====================================
+
+File I/O in HDFS
+- Write Once Read Many models
