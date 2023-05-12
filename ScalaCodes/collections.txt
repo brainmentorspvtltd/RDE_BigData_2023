@@ -1,0 +1,83 @@
+scala> val data = List(3,2,6);
+val data: List[Int] = List(3, 2, 6)
+
+scala> val data: List[Int] = List(3,2,6);
+val data: List[Int] = List(3, 2, 6)
+
+scala> val num = 1 :: (2 :: (3 :: (4 :: Nil)))
+val num: List[Int] = List(1, 2, 3, 4)
+
+scala> num.head
+val res0: Int = 1
+
+scala> num.tail
+val res1: List[Int] = List(2, 3, 4)
+
+scala> val num = List.fill(5)(2)
+val num: List[Int] = List(2, 2, 2, 2, 2)
+
+scala> List.tabulate(5)(n => n * n);
+val res2: List[Int] = List(0, 1, 4, 9, 16)
+
+scala> List.tabulate(2,8)(n => n * n);
+-- [E086] Syntax Error: --------------------------------------------------------
+1 |List.tabulate(2,8)(n => n * n);
+  |                   ^^^^^^^^^^
+  |                   Wrong number of parameters, expected: 2
+1 error found
+
+scala> List.tabulate(8)(n => n * n);
+val res3: List[Int] = List(0, 1, 4, 9, 16, 25, 36, 49)
+
+scala> val x = Set(1,2,3,5,1,2,5,7,1);
+val x: Set[Int] = HashSet(5, 1, 2, 7, 3)
+
+scala> x
+val res4: Set[Int] = HashSet(5, 1, 2, 7, 3)
+
+scala> val data = Map("name" -> "John", "salary" -> 45000, "dept" -> "IT")
+val data: Map[String, Matchable] = Map(name -> John, salary -> 45000, dept -> IT)
+
+scala> data
+val res5: Map[String, Matchable] = Map(name -> John, salary -> 45000, dept -> IT)
+
+scala> data.foreach{ i =>
+     | print("Key = " + i)
+     | println("Value = " + data(i))}
+-- [E007] Type Mismatch Error: -------------------------------------------------
+3 |println("Value = " + data(i))}
+  |                          ^
+  |                          Found:    (i : (String, Matchable))
+  |                          Required: String
+  |
+  | longer explanation available when compiling with `-explain`
+1 error found
+
+scala> data.keys.foreach{ i =>                                                                | print("Key = " + i)
+     | println("Value = " + data(i))}
+Key = nameValue = John
+Key = salaryValue = 45000
+Key = deptValue = IT
+
+scala> data.keys.foreach{ i =>
+     | print("Key = " + i)
+     | println(", Value = " + data(i))}
+Key = name, Value = John
+Key = salary, Value = 45000
+Key = dept, Value = IT
+
+scala> data.contains("name")
+val res6: Boolean = true
+
+scala> data.contains("age")
+val res7: Boolean = false
+
+scala> val t = (2,4,"hello");
+val t: (Int, Int, String) = (2,4,hello)
+
+scala> val it = Iterator("hello","this","is","scala")
+val it: Iterator[String] = <iterator>
+
+scala> while(it.hasNext) {
+    println(it.next())
+}
